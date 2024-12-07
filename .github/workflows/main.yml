@@ -23,5 +23,5 @@ jobs:
       - name: Deploy to server
         
         run: |
-          echo "${{ secrets.SSH_KEY }}" > ssh-key
+          echo > ssh-key ${{ secrets.SSH_KEY }}
           ssh -i ssh-key ubuntu@${{ secrets.HOSTNAME }} "sudo /home/ubuntu/deploy.sh"
