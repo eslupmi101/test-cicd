@@ -24,4 +24,4 @@ jobs:
         
         run: |
           echo ${{ secrets.SSH_KEY }} > ssh-key
-          ssh -i ssh-key ubuntu@${{ secrets.HOSTNAME }} /home/ubuntu/deploy.sh
+          ssh -i ssh-key ubuntu@${{ secrets.HOSTNAME }} "sudo /home/ubuntu/deploy.sh"
